@@ -35,7 +35,7 @@ ui-automation-framework/
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/pshivapr/flaui_framework.git
 cd ui-automation-framework
 ```
 
