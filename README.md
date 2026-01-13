@@ -14,12 +14,12 @@ This project demonstrates UI automation testing for Windows desktop applications
 ## Project Structure
 
 ```
-ui-automation-framework/
-├── flaui-demo/
+flaui-framework/
+├── flaui-framework/
 │   ├── MicrosoftOfficeAppsTests.cs    # Tests for PowerPoint, Word, Excel
 │   ├── NotepadTest.cs                 # Basic Notepad automation test
-│   └── flaui-demo.csproj             # Project configuration
-├── ui-automation-framework.sln        # Solution file
+│   └── flaui-framework.csproj             # Project configuration
+├── flaui-framework.sln        		   # Solution file
 └── README.md                          # This file
 ```
 
@@ -36,7 +36,7 @@ ui-automation-framework/
 
 ```bash
 git clone https://github.com/pshivapr/flaui_framework.git
-cd ui-automation-framework
+cd flaui-framework
 ```
 
 ### 2. Restore Dependencies
@@ -51,15 +51,15 @@ dotnet restore
 
 ```bash
 # Build the entire solution
-dotnet build ui-automation-framework.sln
+dotnet build flaui-framework.sln
 
 # Or build the specific project
-dotnet build flaui-demo/flaui-demo.csproj
+dotnet build flaui-framework/flaui-framework.csproj
 ```
 
 ### Build using Visual Studio
 
-1. Open `ui-automation-framework.sln` in Visual Studio
+1. Open `flaui-framework.sln` in Visual Studio
 2. Press `Ctrl+Shift+B` or select **Build > Build Solution**
 
 ## Running Tests
