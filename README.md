@@ -1,4 +1,4 @@
-# UI Automation Framework
+# FlaUI Automation Framework
 
 A Windows UI automation testing framework built with [FlaUI](https://github.com/FlaUI/FlaUI) and NUnit for automating desktop applications.
 
@@ -19,7 +19,7 @@ flaui-framework/
 │   ├── MicrosoftOfficeAppsTests.cs    # Tests for PowerPoint, Word, Excel
 │   ├── NotepadTest.cs                 # Basic Notepad automation test
 │   └── flaui-framework.csproj             # Project configuration
-├── flaui-framework.sln        		   # Solution file
+├── flaui-framework.sln             # Solution file
 └── README.md                          # This file
 ```
 
