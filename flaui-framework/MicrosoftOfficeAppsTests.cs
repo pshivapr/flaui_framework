@@ -10,6 +10,7 @@ namespace flaui_framework
     {
         private Application? application;
         private UIA3Automation? uIA3Automation;
+        private readonly string paneXpath = "/Pane/Pane[2]/Group/Group[1]/List/ListItem[1]";
 
         [Test]
         [Description("Launch PowerPoint and verify the title")]
@@ -21,7 +22,7 @@ namespace flaui_framework
             application = Application.Attach(appName);
             uIA3Automation = new UIA3Automation();
             var mainWindow = application.GetMainWindow(uIA3Automation);
-            var blankPresentationElement = mainWindow!.FindFirstByXPath("/Pane/Pane/Pane[2]/Group/Group[1]/List/ListItem[1]");
+            var blankPresentationElement = mainWindow!.FindFirstByXPath($"/Pane/{paneXpath}");
             blankPresentationElement?.Click();
             Assert.That(mainWindow, Is.Not.Null);
             Assert.That(mainWindow.Title, Does.Contain("Presentation1 - PowerPoint"));
@@ -65,7 +66,7 @@ namespace flaui_framework
             application = Application.Attach(appName);
             uIA3Automation = new UIA3Automation();
             var mainWindow = application.GetMainWindow(uIA3Automation);
-            var blankDocumentElement = mainWindow!.FindFirstByXPath("/Pane[1]/Pane/Pane[2]/Group/Group[1]/List/ListItem[1]");
+            var blankDocumentElement = mainWindow!.FindFirstByXPath($"/Pane[1]/{paneXpath}");
             blankDocumentElement?.Click();
             Assert.That(mainWindow, Is.Not.Null);
             Assert.That(mainWindow.Title, Does.Contain("Document1 - Word"));
